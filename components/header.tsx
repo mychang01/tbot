@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
@@ -8,12 +9,14 @@ import { IconSeparator } from '@/components/ui/icons'
 function UserOrLogin() {
   return (
     <>
-      <Image
-        src="/logo.png" // 更新为新的logo文件名
-        alt="Company Logo"
-        width={100} // 保持原有宽度,如需调整请修改此值
-        height={30} // 保持原有高度,如需调整请修改此值
-      />
+      <Link href="/new">
+        <Image
+          src="/logo.png"
+          alt="Company Logo"
+          width={100}
+          height={30}
+        />
+      </Link>
 
       <div className="flex items-center font-semibold">
         <IconSeparator className="size-6 text-muted-foreground/50" />
